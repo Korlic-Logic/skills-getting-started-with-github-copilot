@@ -85,6 +85,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Add dark mode toggle button
+  const darkModeButton = document.createElement("button");
+  darkModeButton.textContent = "Toggle Dark Mode";
+  darkModeButton.id = "dark-mode-toggle";
+  document.body.prepend(darkModeButton);
+
+  // Dark mode toggle functionality
+  darkModeButton.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+  });
+
   // Initialize app
   fetchActivities();
 });
